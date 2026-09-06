@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URBAN THREADS — Clothing Line</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="landing-page">
+
+  <!-- Whole-site moving Antigravity background -->
+  <div class="site-bg-container" aria-hidden="true">
+    <div class="antigravity-ambient-bg"></div>
+    <div class="antigravity-grid-overlay"></div>
+    <div id="antigravity-bg"></div>
+  </div>
+
+  <nav class="navbar">
+    <a href="#" class="logo">URBAN THREADS<span>®</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#signup">Join</a>
+    </div>
+  </nav>
+
+  <main class="hero">
+    <section class="hero-copy">
+      <p class="eyebrow">RAINY BACK TO SCHOOL SEASON / 2026</p>
+      <h1 class="hero-title" aria-label="Wear the sky.">
+        <span class="type-line type-line-1"><span class="type-text" data-text="Wear the"></span></span>
+        <span class="type-line type-line-2"><span class="type-text" data-text="sky."></span></span>
+      </h1>
+      <noscript>
+        <style>
+          .hero-title .type-line-1 .type-text::before { content: "Wear the"; }
+          .hero-title .type-line-2 .type-text::before { content: "sky."; }
+        </style>
+      </noscript>
+      <p class="hero-text">
+        Clean silhouettes. Everyday comfort. A clothing line inspired by
+        open skies, cool tones, and effortless streetwear.
+      </p>
+      <a class="hero-button" href="#signup">GET EARLY ACCESS</a>
+
+      <div class="hero-stats" id="about">
+        <div>
+          <strong>01</strong>
+          <span>Minimal Design</span>
+        </div>
+        <div>
+          <strong>02</strong>
+          <span>Street Essentials</span>
+        </div>
+        <div>
+          <strong>03</strong>
+          <span>Fresh Fits</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="visual-card">
+      <div class="sun"></div>
+      <div class="shirt-wrapper">
+        <img
+          src="./images/tshirt-olan.png"
+          alt="Urban Threads Drop 001 Shirt"
+          class="shirt-photo"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+      <p class="visual-label">DROP 001</p>
+      <p class="vertical-text">BUILT FOR EVERYDAY</p>
+    </section>
+  </main>
+
+  <section class="signup-section" id="signup">
+    <div class="signup-copy">
+      <p class="eyebrow">MEMBERS ONLY</p>
+      <h2>Unlock the<br>first drop.</h2>
+      <p>
+        Sign up to enter the collection. This demo stores nothing online —
+        it simply validates your information and opens the next page.
+      </p>
+    </div>
+
+    <form class="signup-form" id="signupForm">
+      <div class="field">
+        <label for="name">FULL NAME</label>
+        <input type="text" id="name" placeholder="Your name" required />
+      </div>
+
+      <div class="field">
+        <label for="email">EMAIL ADDRESS</label>
+        <input type="email" id="email" placeholder="you@example.com" required />
+      </div>
+
+      <div class="field">
+        <label for="password">PASSWORD</label>
+        <div class="password-input-wrapper">
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="At least 6 characters"
+            minlength="6"
+            autocomplete="new-password"
+            required
+          />
+          <button
+            type="button"
+            class="toggle-password-btn"
+            id="togglePassword"
+            aria-label="Show password"
+            aria-pressed="false"
+            title="Show password"
+          >
+            <svg class="eye-icon eye-icon-show" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+            <svg class="eye-icon eye-icon-hide" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: none;">
+              <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/>
+              <path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/>
+              <path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/>
+              <line x1="2" y1="2" x2="22" y2="22"/>
+            </svg>
+            <span class="toggle-password-text">SHOW</span>
+          </button>
+        </div>
+      </div>
+
+      <label class="checkbox-row">
+        <input type="checkbox" id="terms" required />
+        <span>I agree to receive updates about future drops.</span>
+      </label>
+
+      <button type="submit" class="submit-button">
+        CREATE ACCOUNT <span>→</span>
+      </button>
+
+      <p class="form-note" id="formNote"></p>
+    </form>
+  </section>
+
+  <footer>
+    <a href="#" class="logo footer-logo">URBAN THREADS<span>®</span></a>
+    <p>© 2026 URBAN THREADS CLOTHING.</p>
+  </footer>
+
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
