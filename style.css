@@ -392,6 +392,236 @@ a {
   pointer-events: none;
 }
 
+/* =========================================================
+   Banner Ad Section (Between Hero and Sign Up)
+   ========================================================= */
+.banner-ad-section {
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid var(--line);
+  background: rgba(240, 248, 255, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 44px 6vw;
+  overflow: hidden;
+}
+
+.banner-ad-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.banner-ad-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 580px;
+}
+
+.banner-ad-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.ad-tag {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  padding: 3px 8px;
+  background: var(--ink);
+  color: var(--white);
+  border-radius: 2px;
+  line-height: 1.2;
+}
+
+.ad-season {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--ink);
+  opacity: 0.75;
+}
+
+.banner-ad-title {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(1.8rem, 3.8vw, 3rem);
+  font-weight: 800;
+  line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+
+.banner-ad-title span {
+  color: var(--sky-deep);
+  -webkit-text-stroke: 1px var(--ink);
+}
+
+.banner-ad-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--ink);
+  opacity: 0.85;
+  margin-bottom: 22px;
+  max-width: 480px;
+}
+
+.banner-ad-action {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.banner-ad-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 22px;
+  min-height: 46px;
+  background: var(--ink);
+  color: var(--white);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border: 1px solid var(--ink);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.banner-ad-cta-btn:hover {
+  background: transparent;
+  color: var(--ink);
+}
+
+.banner-ad-prompt {
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  opacity: 0.65;
+  font-weight: 500;
+}
+
+/* Media Column - Positioned on the Right Side */
+.banner-ad-media-col {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.banner-ad-card-link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.banner-ad-card {
+  position: relative;
+  width: 250px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--line);
+  padding: 10px;
+  box-shadow: 0 10px 25px rgba(16, 33, 43, 0.09);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+}
+
+.banner-ad-card:hover,
+.banner-ad-card-link:focus-visible .banner-ad-card {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 18px 36px rgba(16, 33, 43, 0.16);
+  border-color: var(--ink);
+}
+
+.banner-ad-image-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.banner-ad-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.banner-ad-card:hover .banner-ad-image {
+  transform: scale(1.05);
+}
+
+.banner-ad-hover-badge {
+  position: absolute;
+  inset: 0;
+  background: rgba(16, 33, 43, 0.38);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.banner-ad-hover-badge span {
+  font-family: "Syne", sans-serif;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--white);
+  background: var(--ink);
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transform: translateY(6px);
+  transition: transform 0.3s ease;
+}
+
+.banner-ad-card:hover .banner-ad-hover-badge {
+  opacity: 1;
+}
+
+.banner-ad-card:hover .banner-ad-hover-badge span {
+  transform: translateY(0);
+}
+
+.banner-ad-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 4px 2px 2px;
+}
+
+.caption-brand {
+  font-family: "Syne", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+}
+
+.caption-action {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+}
+
 .signup-section {
   min-height: 90vh;
   display: grid;
@@ -740,10 +970,12 @@ footer p {
 
 footer {
   min-height: 80px;
-  padding: 0 6vw;
+  padding: 20px 6vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
   border-top: 1px solid var(--line);
   position: relative;
   z-index: 10;
@@ -751,6 +983,20 @@ footer {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   font-size: 0.78rem;
+}
+
+.footer-dev {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.85;
+}
+
+.footer-dev span {
+  font-weight: 800;
+  letter-spacing: 0.1em;
 }
 
 @media (max-width: 850px) {
@@ -787,9 +1033,30 @@ footer {
     border-right: none;
     border-bottom: 1px solid var(--line);
   }
+
+  .banner-ad-container {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .banner-ad-media-col {
+    justify-content: flex-end;
+  }
+
+  .banner-ad-card {
+    width: 220px;
+  }
 }
 
 @media (max-width: 560px) {
+  .banner-ad-section {
+    padding: 34px 6vw;
+  }
+
+  .banner-ad-card {
+    width: min(220px, 70vw);
+  }
+
   .navbar {
     min-height: 70px;
   }

@@ -19,7 +19,7 @@
   </div>
 
   <nav class="navbar shop-nav">
-    <a href="index.html" class="logo">SKYLINE<span>®</span></a>
+    <a href="index.html" class="logo">URBAN THREADS<span>®</span></a>
     <div class="nav-links">
       <a href="#collection">Collection</a>
       <a href="index.html">Log out</a>
@@ -102,22 +102,46 @@
 
   <footer>
     <a href="index.html" class="logo footer-logo">URBAN THREADS<span>®</span></a>
+    <p class="footer-dev">DEV: <span>Elijah Jacobo</span></p>
     <p>© 2026 URBAN THREADS CLOTHING.</p>
   </footer>
 
   <script>
-    const savedName = sessionStorage.getItem("skylineName");
-    const signedUp = sessionStorage.getItem("skylineSignedUp");
+    const urlParams = new URLSearchParams(window.location.search);
+    const fromBanner = urlParams.get("from") === "banner";
+    const fromSignup = urlParams.get("signedUp") === "true";
+    const paramName = urlParams.get("name");
+
+    if (fromBanner || fromSignup) {
+      try {
+        sessionStorage.setItem("skylineSignedUp", "true");
+        sessionStorage.setItem("urbanThreadsSignedUp", "true");
+        if (paramName) {
+          sessionStorage.setItem("skylineName", paramName);
+          sessionStorage.setItem("urbanThreadsName", paramName);
+        }
+      } catch (e) {}
+    }
+
+    let savedName = paramName;
+    try {
+      savedName = savedName || sessionStorage.getItem("skylineName") || sessionStorage.getItem("urbanThreadsName");
+    } catch (e) {}
+
+    let signedUp = fromBanner || fromSignup;
+    try {
+      signedUp = signedUp || (sessionStorage.getItem("skylineSignedUp") === "true") || (sessionStorage.getItem("urbanThreadsSignedUp") === "true");
+    } catch (e) {}
 
     if (!signedUp) {
       window.location.href = "index.html#signup";
-    }
-
-    if (savedName) {
-      document.getElementById("welcomeMessage").textContent =
-        `Welcome, ${savedName}. You now have access to the first collection.`;
+    } else if (savedName) {
+      const welcomeEl = document.getElementById("welcomeMessage");
+      if (welcomeEl) {
+        welcomeEl.textContent = `Welcome, ${savedName}. You now have access to the first collection.`;
+      }
     }
   </script>
-  <script type="module" src="/src/main.jsx"></script>
+  <script src="antigravity.js" defer></script>
 </body>
 </html>

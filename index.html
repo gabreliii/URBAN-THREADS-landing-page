@@ -77,6 +77,61 @@
     </section>
   </main>
 
+  <!-- Banner Ad between First Page (Hero) and Sign Up Page -->
+  <section class="banner-ad-section" id="banner-ad" aria-label="Drop 001 Collection Banner Ad">
+    <div class="banner-ad-container">
+      <div class="banner-ad-copy">
+        <div class="banner-ad-badge">
+          <span class="ad-tag">ADVERTISEMENT</span>
+          <span class="ad-season">FALL / BACK TO SCHOOL 2026</span>
+        </div>
+        <h2 class="banner-ad-title">
+          DROP <span>001</span> // RAINY SEASON
+        </h2>
+        <p class="banner-ad-desc">
+          Fresh silhouettes crafted for the season. Tap the banner ad or button to jump straight into the collection shop.
+        </p>
+        <div class="banner-ad-action">
+          <a href="shop.html?from=banner" class="banner-ad-cta-btn" id="bannerAdCta">
+            GO TO SHOP <span>→</span>
+          </a>
+          <span class="banner-ad-prompt">Click the ad photo on the right to enter shop</span>
+        </div>
+      </div>
+
+      <div class="banner-ad-media-col">
+        <a
+          href="shop.html?from=banner"
+          class="banner-ad-card-link"
+          id="bannerAdPhotoLink"
+          aria-label="Click ad photo to visit the Urban Threads shop"
+          title="Click to visit the shop"
+        >
+          <div class="banner-ad-card">
+            <div class="banner-ad-image-box">
+              <img
+                src="./images/banner-add-urban.png"
+                alt="Urban Threads Drop 001 Banner Ad"
+                class="banner-ad-image"
+                loading="lazy"
+                decoding="async"
+                width="260"
+                height="260"
+              />
+              <div class="banner-ad-hover-badge" aria-hidden="true">
+                <span>ENTER SHOP ↗</span>
+              </div>
+            </div>
+            <div class="banner-ad-caption">
+              <span class="caption-brand">URBAN THREADS®</span>
+              <span class="caption-action">CLICK TO SHOP →</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section class="signup-section" id="signup">
     <div class="signup-copy">
       <p class="eyebrow">MEMBERS ONLY</p>
@@ -87,7 +142,7 @@
       </p>
     </div>
 
-    <form class="signup-form" id="signupForm">
+    <form class="signup-form" id="signupForm" action="shop.html" method="GET">
       <div class="field">
         <label for="name">FULL NAME</label>
         <input type="text" id="name" placeholder="Your name" required />
@@ -148,9 +203,11 @@
 
   <footer>
     <a href="#" class="logo footer-logo">URBAN THREADS<span>®</span></a>
+    <p class="footer-dev">DEV: <span>Elijah Jacobo</span></p>
     <p>© 2026 URBAN THREADS CLOTHING.</p>
   </footer>
 
-  <script type="module" src="/src/main.jsx"></script>
+  <script src="script.js" defer></script>
+  <script src="antigravity.js" defer></script>
 </body>
 </html>
