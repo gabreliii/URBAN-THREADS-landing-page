@@ -29,6 +29,4 @@ How to Run:
    npm run build
    Compiles optimized production assets into the 'dist/' folder.
 
-3. Preview Production Build:
-   npm run preview
-   Serves the production build locally at http://localhost:4173/
+
